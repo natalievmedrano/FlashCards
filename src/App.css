@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.header{
+  background-color: pink;
+  margin: auto;
+  padding: 1%;
+}
+
+.card{
+  background-color: gray;
+  box-shadow: black;
+  text-align: center;
+  height: 300px;
+  width: 700px;
+}
