@@ -2,7 +2,7 @@
 const Header = ({}) => {
     return (
         <div className="header">
-        <h1>FLASHCARDS</h1>
+        <a href="http://localhost:3000/"><h1>FLASHCARDS</h1></a>
         </div>
     )
 
