@@ -52,9 +52,13 @@ body{
   display: flex;
   align-items: center;
   text-align: center;
-
   background-color: gray;
   background-color: #FFF6E8;
   height: 300px;
   width: 700px;
+}
+
+
+.add{
+  margin-right: auto;
 }
