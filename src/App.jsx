@@ -8,15 +8,30 @@ import axios from 'axios';
 
 function App() {
   const[flashcards,setFlashCards] = useState(SampleApp)
+  const[collections, setCollections] = useState([])
 
+  async function getAllCollections ()  {
+      let response = await axios.get('http://127.0.0.1:8000/api/collections/')
+      setCollections(response.data);
+  }
   useEffect(()=>{
-    
+    getAllCollections()
   },[])
 
+  async function getAllCards () {
+    let response = await axios.get('http://127.0.0.1:8000/api/collections/2/cards/')
+    setFlashCards(response.data)
+    
+  }
+  useEffect(()=>{
+    getAllCards()
+  },[])
+
+  console.log(collections);
   return (
-    <div>
+    <div id='app'>
      <Header/>
-     <SideBar/>
+     <SideBar collections={collections}/> <button onClick={getAllCollections}> COLLECTIONS</button>
      <CardContainer flashcards={flashcards}/>
      </div>
   );
@@ -24,9 +39,8 @@ function App() {
 
 const SampleApp = [
   {
-  word: 'WORD GOES HERE',
-  definition:'DEFINITION GOES HERE',
-  button:'BUTTONS GO AROUND CARD'
+  word: 'WORD ',
+  definition:'DEFINITION',
   }
 ]
 
