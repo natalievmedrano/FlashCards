@@ -13,7 +13,11 @@ function Card({ flashcard }) {
       >
         {flip ? flashcard.definition : flashcard.word}
       </div>
+      <div className="front-card">
+        
+      </div>
     </div>
+    //on change maybe for keeping track of number card
   );
 }
 

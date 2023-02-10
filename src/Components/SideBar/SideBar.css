@@ -1,0 +1,33 @@
+.sidebar-container {
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 300px;
+}
+
+.nav-option1 {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 10px;
+  width: 250px;
+  font-size: 15px;
+}
+
+.nav-op2 {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 10px;
+  width: 250px;
+  font-size: 15px;
+}
+
+.nav-op3 {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 10px;
+  width: 250px;
+  font-size: 15px;
+}
