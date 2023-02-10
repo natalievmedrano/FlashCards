@@ -7,8 +7,7 @@ function Card({ flashcard }) {
 
   return (
     <div className="card">
-      <button onClick={() => setCount(number + 1)}> ▲ </button>
-      <button onClick={() => setCount(number - 1)}> ▼ </button>
+
       <div
         className={`card ${flip ? "flip" : ""}`}
         onClick={() => setFlip(!flip)}
