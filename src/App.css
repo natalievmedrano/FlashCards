@@ -1,5 +1,5 @@
 body{
-  background-color: gray;
+  background-color: #CCFF99;
 }
 
 .App {
@@ -42,21 +42,13 @@ body{
 }
 
 .header{
-  background-color:darkgrey;
+  background-color:#669933;
   margin: auto;
   padding: 1%;
   color: white;
 }
 
-.card{
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: gray;
-  background-color: #FFF6E8;
-  height: 300px;
-  width: 700px;
-}
+
 
 
 .add{

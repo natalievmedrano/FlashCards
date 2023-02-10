@@ -1,8 +1,8 @@
-
+import './Header.css'
 const Header = ({}) => {
     return (
         <div className="header">
-        <a href="http://localhost:3000/"><h1>FLASHCARDS</h1></a>
+       <h1>FLASHCARDS</h1>
         </div>
     )
 

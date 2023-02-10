@@ -1,0 +1,12 @@
+.card{
+    display: right;
+    align-items: right;
+    text-align: center;
+    background-color: gray;
+    background-color: #FFFFCC;
+    height: 300px;
+    width: 700px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
