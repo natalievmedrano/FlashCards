@@ -45,9 +45,6 @@ function App() {
     <div id="app">
       <Header />
       <SideBar collections={collections} getAllCards={getAllCards} />
-      <button onClick={getAllCollections}> COLLECTIONS</button>
-      <button onClick={addNewCard}>ADD CARD</button>
-      <button>DELETE CARD</button>
       <CardContainer flashcards={flashcards} />
     </div>
   );

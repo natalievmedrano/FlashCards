@@ -4,7 +4,7 @@ import "./SideBar.css";
 
 function SideBar({ collections,getAllCards }) {
   return (
-    <div>
+    <div id="sideBar">
       {collections.map((collection) => {
         return <Collection collection={collection} getAllCards={getAllCards}/>;
       })}
