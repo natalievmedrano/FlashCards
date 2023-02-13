@@ -1,32 +1,15 @@
 import React from "react";
-import './SideBar.css';
+import Collection from "../Collection/Collection";
+import "./SideBar.css";
 
-
-
-function SideBar (){
-
-    return (
-        <div>
-        <div className="navbar-container">
-            <div className="sidebar-container">
-                <div className="nav-option1">
-                    <h3>FLUTTER</h3>
-                </div>
-                <div className="nav-op2">
-                    <h3>CSS</h3>
-                </div>
-                <div className="nav-op3">
-                    <h3>PANDAS</h3>
-                </div>
-
-            </div>
-        </div>
-        </div>
-    )
-
-
+function SideBar({ collections,getAllCards }) {
+  return (
+    <div>
+      {collections.map((collection) => {
+        return <Collection collection={collection} getAllCards={getAllCards}/>;
+      })}
+    </div>
+  );
 }
-
-
 
 export default SideBar;
