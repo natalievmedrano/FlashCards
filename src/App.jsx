@@ -5,10 +5,13 @@ import SideBar from "./Components/SideBar/Sidebar";
 //import Card from './Components/Card/Card';
 import CardContainer from "./Components/CardContainer/CardContainer";
 import axios from "axios";
+import Button from "./Components/Button/Button";
+import DisplayCount from "./Components/DisplayCount/DisplayCount";
 
 function App() {
   const [collections, setCollections] = useState([]);
   const [flashcards, setFlashCards] = useState([]);
+  const[count,setCount] = useState(1);
 
   async function getAllCollections() {
     let response = await axios.get("http://127.0.0.1:8000/api/collections/");
@@ -37,14 +40,18 @@ function App() {
       await getAllCards();
     }
   }
-  useEffect(() => {
-    addNewCard();
-  }, []);
+  function updateClickCount(){
+    let newCount = count + 1
+    setCount(newCount)
+  }
+  
 
   return (
     <div id="app">
       <Header />
-      <SideBar collections={collections} getAllCards={getAllCards} />
+      <Button updateClickCount ={updateClickCount}/>
+      <DisplayCount currentCount={count}/>
+      <SideBar collections={collections} getAllCards={getAllCards} addNewCard={flashcards} />
       <CardContainer flashcards={flashcards} />
     </div>
   );
